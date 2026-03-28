@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bank Services — Delhi Nagrik Sehkari Bank Ltd. (DNSB)</title>
+<meta name="description" content="DNSB savings, deposits, loans, cash credit, and cyber security awareness — premium co-operative banking products for Delhi."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div id="header-mount" class="components-mount"></div>
+
+<!-- ================================================================ DETAILED SERVICES ================================================================ -->
+<section id="services-page" class="section" style="padding-top:60px;padding-bottom:96px">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <span class="tag">What we offer</span>
+      <h1 class="hero-title">Bank <span class="gradient-text">Services</span></h1>
+      <p class="section-sub" style="margin:0 auto">Premium financial products customized for your dynamic needs. Secure your future with our highly structured cooperative systems and superior interest rates.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <h3>
+          <img src="assets_all/saving_img-1.png" alt="" width="52" height="52" onerror="this.onerror=null;this.src='https://dnsbltd.com/wp-content/uploads/2018/04/saving_img-1.png'"/>
+          Savings With Earnings
+        </h3>
+        <ul class="service-list">
+          <li>Saving Bank Account</li>
+          <li>Current Account</li>
+          <li>Recurring Deposit Account</li>
+          <li>Term Deposit</li>
+          <li>No Frill Account</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:.1s">
+        <h3>
+          <img src="assets_all/saving_img-2.png" alt="" width="52" height="52" onerror="this.onerror=null;this.src='https://dnsbltd.com/wp-content/uploads/2018/04/saving_img-2.png'"/>
+          Premium Loans
+        </h3>
+        <ul class="service-list">
+          <li>Loan Rules &amp; Policies</li>
+          <li>Unsecured Loans</li>
+          <li>Secured Loans</li>
+          <li>Registered Mortgage</li>
+          <li>Repair / Renovation / Plot / House</li>
+          <li>Vehicle Loan</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal" style="transition-delay:.2s">
+        <h3>
+          <img src="assets_all/saving_img.png" alt="" width="52" height="52" onerror="this.onerror=null;this.src='https://dnsbltd.com/wp-content/uploads/2018/04/saving_img.png'"/>
+          Cash Credit Limit
+        </h3>
+        <ul class="service-list">
+          <li>Clean C.C. / OD Limit (Unsecured)</li>
+          <li>C.C. / OD Limit (Secured)</li>
+          <li>Dynamic Credit Overrun Access</li>
+          <li>Business Flexi-Credit</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="cyber-security-banner reveal" style="margin-top:32px">
+      <div>
+        <h3>National Cyber Security Awareness</h3>
+        <p>Your security is our highest priority. To protect your digital assets, adhere strictly to the National Cyber Security Awareness guidelines (NCSAM). Ensure absolute discretion with your credentials.</p>
+      </div>
+      <a href="https://dnsbltd.com/wp-content/uploads/2023/08/CIR780.pdf" target="_blank" rel="noopener noreferrer" class="cyber-btn">
+        <span style="display:inline-flex;align-items:center;gap:12px">
+          <img src="https://dnsbltd.com/wp-content/uploads/2023/08/pdf.png" alt="" width="24" height="24" style="margin:0"/>
+          NCSAM PDF Guide
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount" class="components-mount"></div>
+
+<button type="button" id="chat-fab" onclick="toggleChat()" title="Chat with DNSB">
+  💬<span class="chat-notif">1</span>
+</button>
+
+<div id="chat-window">
+  <div class="chat-head">
+    <div class="chat-av">🏦</div>
+    <div><div class="chat-hname">DNSB Assistant</div><div class="chat-hstatus">Online · Powered by AI</div></div>
+    <button type="button" class="chat-hclose" onclick="toggleChat()" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-faqs" id="chat-faqs">
+    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')">Open Account</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')">Loan Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')">Branch Details</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')">DICGC Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')">FD Scheme</span>
+  </div>
+  <div class="chat-foot">
+    <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
+    <button type="button" id="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script src="js/site-shared.js"></script>
+<script>
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => ro.observe(el));
+</script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
