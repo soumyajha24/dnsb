@@ -70,7 +70,7 @@ async function handleBot(msg) {
     return;
   }
   if (lower.includes('loan') || lower.includes('emi') || lower.includes('rin')) {
-    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>• Unsecured Loans (no collateral)<br/>• Secured Loans (with collateral)<br/>• Registered Mortgage<br/>• Vehicle Loan<br/>• Home Renovation / Plot Purchase<br/><br/>📋 <a href='https://dnsbltd.com/services/' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Official loan details on dnsbltd.com →</a><br/><br/>Use our <a href='index.html#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> on the home page to plan your loan. Or visit any branch!");
+    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>• Unsecured Loans (no collateral)<br/>• Secured Loans (with collateral)<br/>• Registered Mortgage<br/>• Vehicle Loan<br/>• Home Renovation / Plot Purchase<br/><br/>📄 <a href='https://dnsbltd.com/wp-content/uploads/2025/12/RATES-OF-INTEREST-LOANS.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Official loan interest rates (PDF) →</a><br/>📋 <a href='https://dnsbltd.com/services/' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Product list on dnsbltd.com/services →</a><br/><br/>Use our <a href='index.html#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> on the home page to plan your loan. Or visit any branch!");
     return;
   }
   if (lower.includes('dicgc') || lower.includes('insurance') || lower.includes('insure') || lower.includes('deposit safe')) {

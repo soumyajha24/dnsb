@@ -7,7 +7,7 @@
 <meta name="description" content="DNSB registered office, administrative office, phone, email, and branch network across Delhi."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
@@ -57,12 +57,18 @@
       </div>
     </div>
 
-    <div class="reveal" style="padding-top:60px;border-top:1px solid var(--border);margin-bottom:48px;text-align:center">
-      <span class="tag">Locations</span>
-      <h2 class="section-title">Our Branch Network</h2>
-    </div>
-
-    <div class="branch-grid">
+    <div class="loc-network reveal" id="loc-network" aria-labelledby="loc-network-title">
+      <div class="loc-network-inner glass-card">
+        <div class="loc-network-head">
+          <span class="tag" data-i18n="page.ct.loc_tag">Locations</span>
+          <h2 id="loc-network-title" class="section-title" data-i18n="page.ct.branch_network">Our Branch Network</h2>
+          <p class="section-sub loc-network-sub" data-i18n="page.ct.loc_sub">All DNSB branches across Delhi — full address, phone numbers, and directions.</p>
+        </div>
+        <div class="loc-branches-panel-head">
+          <h3 data-i18n="page.ct.all_branches">Branch directory</h3>
+          <span class="loc-branch-count" data-i18n="page.ct.branch_count">16 locations</span>
+        </div>
+        <div class="branch-grid branch-grid--contact">
       <article class="branch-card reveal">
         <span class="bc-num">1</span>
         <div class="bc-title">ADMN. OFFICE</div>
@@ -71,6 +77,7 @@
           <a href="tel:01145541592">011-45541592</a>
           <a href="tel:01145062644">011-45062644</a>
         </div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.05s">
@@ -78,6 +85,7 @@
         <div class="bc-title">SUBZI MANDI</div>
         <div class="bc-addr">720, NEAR GHANTA GHAR, SUBZI MANDI, DELHI-110007</div>
         <div class="bc-phone"><a href="tel:01141036482">011-41036482</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.1s">
@@ -85,6 +93,7 @@
         <div class="bc-title">KRISHNA NAGAR</div>
         <div class="bc-addr">E-5/27, GROUND FLOOR, NEAR LALA LAJPAT RAI CHOWK, KRISHANA NAGAR, DELHI-110051</div>
         <div class="bc-phone"><a href="tel:01135011148">011-35011148</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.15s">
@@ -92,6 +101,7 @@
         <div class="bc-title">TRI NAGAR</div>
         <div class="bc-addr">1769/129 SHANTI NAGAR, TRI NAGAR, DELHI-110035</div>
         <div class="bc-phone"><a href="tel:01135011840">011-35011840</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal">
@@ -102,6 +112,7 @@
           <a href="tel:01146082199">011-46082199</a>
           <a href="tel:01146095737">011-46095737</a>
         </div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.05s">
@@ -109,6 +120,7 @@
         <div class="bc-title">LAJPAT NAGAR</div>
         <div class="bc-addr">198/44, RAMESH MARKET, GARHI, EAST OF KAILASH, NEW DELHI-110024</div>
         <div class="bc-phone"><a href="tel:01145721376">011-45721376</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.1s">
@@ -116,6 +128,7 @@
         <div class="bc-title">NARELA</div>
         <div class="bc-addr">U-59, LAMPUR ROAD, NARELA, DELHI-110040</div>
         <div class="bc-phone"><a href="tel:9899401305">9899401305</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.15s">
@@ -123,6 +136,7 @@
         <div class="bc-title">PITAM PURA</div>
         <div class="bc-addr">RAMA MARKET, PITAMPURA, DELHI-110034</div>
         <div class="bc-phone"><a href="tel:01145725697">011-45725697</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal">
@@ -134,6 +148,7 @@
           <a href="tel:01141437491">011-41437491</a>
           <a href="tel:01145573298">011-45573298</a>
         </div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.05s">
@@ -141,6 +156,7 @@
         <div class="bc-title">NANGLOI</div>
         <div class="bc-addr">PLOT NO.1-B, DHARAM COLONY, NANGLOI JAT, DELHI-110041</div>
         <div class="bc-phone"><a href="tel:8595410769">8595410769</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.1s">
@@ -151,6 +167,7 @@
           <a href="tel:01147510182">011-47510182</a>
           <a href="tel:01147083976">011-47083976</a>
         </div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.15s">
@@ -158,6 +175,7 @@
         <div class="bc-title">NAJAFGARH</div>
         <div class="bc-addr">PLOT NO.2, BLOCK-B, OLD ROSHAN PURA, NAJAFGARH, DELHI-110043</div>
         <div class="bc-phone"><a href="tel:01149295315">011-49295315</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal">
@@ -165,6 +183,7 @@
         <div class="bc-title">ROHINI</div>
         <div class="bc-addr">UNIT NO.41, IST FLOOR, CSC BLOCK C, SECTOR 15, ROHINI, DELHI-110085</div>
         <div class="bc-phone"><a href="tel:01143521895">011-43521895</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.05s">
@@ -172,6 +191,7 @@
         <div class="bc-title">MEETHA PUR</div>
         <div class="bc-addr">223, 1ST FLOOR MEETHAPUR, MUMBAI EXPRESS WAY SERVICE ROAD, NEW DELHI-110044</div>
         <div class="bc-phone"><a href="tel:01141064645">011-41064645</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.1s">
@@ -179,6 +199,7 @@
         <div class="bc-title">KARAWAL NAGAR</div>
         <div class="bc-addr">K-182, RAJESH PILOT CHOWK KARAWAL NAGAR INDL.AREA OPP.DTC BUS TERMINAL, NEW DELHI-110094</div>
         <div class="bc-phone"><a href="tel:7290998578">7290998578</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
 
       <article class="branch-card reveal" style="transition-delay:0.15s">
@@ -186,10 +207,13 @@
         <div class="bc-title">ARB. &amp; REC. CELL</div>
         <div class="bc-addr">3-C/5, OPP. LIBERTY CINEMA, NEW ROHTAK ROAD, NEW DELHI-110005</div>
         <div class="bc-phone"><a href="tel:01141418761">011-41418761</a></div>
+        <a class="bc-dir" href="#" target="_blank" rel="noopener noreferrer" data-i18n="page.ct.directions">Directions</a>
       </article>
+        </div>
+      </div>
     </div>
 
-    <div style="text-align:center;margin-top:48px" class="reveal">
+    <div style="text-align:center;margin-top:56px" class="reveal">
       <a href="index.html" class="btn btn-ghost" data-i18n="page.ct.back">← Back to home</a>
       <a href="mailto:info@dnsbltd.com" class="btn btn-primary" style="margin-left:12px" data-i18n="page.ct.email">Email us</a>
     </div>

@@ -28,7 +28,23 @@ const siteComponentsReady = (async () => {
   }
 })().finally(() => {
   if (typeof window.applyI18n === 'function') window.applyI18n();
+  bindDirectionsLinks();
 });
+
+function bindDirectionsLinks() {
+  document.querySelectorAll('a.bc-dir[href="#"]').forEach((a) => {
+    const card = a.closest('.branch-card, .b-card');
+    const addr = card && card.querySelector('.bc-addr, .b-addr');
+    if (addr) {
+      a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(addr.textContent.trim());
+    }
+  });
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bindDirectionsLinks);
+} else {
+  bindDirectionsLinks();
+}
 
 (function initBgCanvas() {
   const canvas = document.getElementById('bg-canvas');
