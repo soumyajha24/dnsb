@@ -18,9 +18,9 @@
 <main class="page-main">
   <header class="page-hero section" style="padding-bottom:32px">
     <div class="container">
-      <p class="page-kicker">Profile</p>
-      <h1 class="page-title">About <span class="gradient-text">DNSB</span></h1>
-      <p class="page-lead">Discover the history, mission, and the people behind Delhi Nagrik Sehkari Bank Ltd.</p>
+      <p class="page-kicker" data-i18n="page.about.kicker">Profile</p>
+      <h1 class="page-title"><span data-i18n="page.about.title">About</span> <span class="gradient-text" data-i18n="page.about.title_x">DNSB</span></h1>
+      <p class="page-lead" data-i18n="page.about.lead">Discover the history, mission, and the people behind Delhi Nagrik Sehkari Bank Ltd.</p>
     </div>
   </header>
 
@@ -168,8 +168,9 @@
 </main>
 
 <div id="footer-mount" class="components-mount"></div>
-<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n-title="to_top">↑</button>
 
+<script src="js/i18n.js"></script>
 <script src="js/site-shared.js"></script>
 <script>
 const ro = new IntersectionObserver(entries => {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,13 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-
 <canvas id="bg-canvas"></canvas>
 
-<!-- Header: edit components/header.html (needs http://127.0.0.1 or similar — not file://) -->
+<!-- Header: edit components/header.html -->
 <div id="header-mount" class="components-mount"></div>
 
 <!-- ================================================================ HERO ================================================================ -->
@@ -21,43 +20,43 @@
   <div class="container">
     <div class="hero-grid">
       <div class="reveal-left">
-        <div style="margin-bottom:20px"><span class="tag">Delhi's Trusted Cooperative Bank</span></div>
-        <h1 class="hero-title">Banking With <span class="gradient-text">Purpose &amp; Precision</span></h1>
-        <p class="hero-desc">Delhi Nagrik Sehkari Bank Ltd. — serving Delhi since 1969. Honest, accessible co-operative banking for every citizen, with the strength of RBI oversight and DICGC protection.</p>
+        <div style="margin-bottom:20px"><span class="tag" data-i18n="hero.tag">Delhi's Trusted Cooperative Bank</span></div>
+        <h1 class="hero-title"><span data-i18n="hero.title1">Banking With</span> <span class="gradient-text" data-i18n="hero.title2">Purpose &amp; Precision</span></h1>
+        <p class="hero-desc" data-i18n="hero.desc">Delhi Nagrik Sehkari Bank Ltd. — serving the people of Delhi since 1969. Built to uplift economically weaker sections with honest, accessible cooperative banking.</p>
         <div class="hero-ctas">
-          <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Internet Banking</a>
-          <a href="about.html" class="btn btn-ghost">About DNSB</a>
-          <a href="services.html" class="btn btn-gold">Our Services</a>
+          <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" class="btn btn-primary" data-i18n="hero.cta_ib">🔐 Internet Banking</a>
+          <a href="#services" class="btn btn-ghost" data-i18n="hero.cta_svc">Explore Services ↓</a>
+          <a href="#calculator" class="btn btn-gold" data-i18n="hero.cta_emi">📊 EMI Calculator</a>
         </div>
         <div class="hero-trust">
-          <div class="trust-pill"><span class="dot"></span> DICGC Insured ₹5L</div>
-          <div class="trust-pill"><span class="dot"></span> RBI Regulated</div>
-          <div class="trust-pill"><span class="dot"></span> Since 1969</div>
+          <div class="trust-pill"><span class="dot"></span> <span data-i18n="hero.trust1">DICGC Insured ₹5L</span></div>
+          <div class="trust-pill"><span class="dot"></span> <span data-i18n="hero.trust2">RBI Regulated</span></div>
+          <div class="trust-pill"><span class="dot"></span> <span data-i18n="hero.trust3">Since 1969</span></div>
         </div>
       </div>
       <div class="hero-visual reveal-right">
         <div class="h-card">
           <div class="hc-top">
             <div>
-              <div class="hc-label">Account Type</div>
-              <div class="hc-name">Savings Account</div>
+              <div class="hc-label" data-i18n="hero.card.acct">Account Type</div>
+              <div class="hc-name" data-i18n="hero.card.savings">Savings Account</div>
             </div>
             <div class="hc-chip"></div>
           </div>
-          <div class="hc-amount-label">INSURED AMOUNT PER CUSTOMER</div>
+          <div class="hc-amount-label" data-i18n="hero.card.ins">INSURED AMOUNT PER CUSTOMER</div>
           <div class="hc-amount gradient-text">₹5,00,000</div>
           <div class="hc-divider"></div>
           <div class="hc-row">
-            <div><div class="hc-stat-val">1969</div><div class="hc-stat-key">Founded</div></div>
-            <div><div class="hc-stat-val">Delhi</div><div class="hc-stat-key">Region</div></div>
-            <div><div class="hc-stat-val">RBI</div><div class="hc-stat-key">Regulated</div></div>
+            <div><div class="hc-stat-val">1969</div><div class="hc-stat-key" data-i18n="hero.card.founded">Founded</div></div>
+            <div><div class="hc-stat-val">Delhi</div><div class="hc-stat-key" data-i18n="hero.card.region">Region</div></div>
+            <div><div class="hc-stat-val">RBI</div><div class="hc-stat-key" data-i18n="hero.card.reg">Regulated</div></div>
           </div>
         </div>
         <div class="mini-float">
-          <div class="mf-title">Special Scheme</div>
-          <div class="mf-val">555 Days</div>
-          <div class="mf-sub">Term Deposit</div>
-          <div class="mf-badge">âœ¦ Active Now</div>
+          <div class="mf-title" data-i18n="hero.mini.scheme">Special Scheme</div>
+          <div class="mf-val" data-i18n="hero.mini.days">555 Days</div>
+          <div class="mf-sub" data-i18n="hero.mini.fd">Term Deposit</div>
+          <div class="mf-badge" data-i18n="hero.mini.now">✦ Active Now</div>
         </div>
       </div>
     </div>
@@ -66,19 +65,19 @@
 
 <!-- MARQUEE -->
 <div id="marquee-bar">
-  <div class="mq-label">📢 Notices</div>
+  <div class="mq-label" data-i18n="mq.label">📢 Notices</div>
   <div style="overflow:hidden">
     <div class="mq-track">
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank">DEAF Outstanding as on 31-12-2025</a></span>
-      <span class="mq-item"><span class="mq-dot">▸</span>Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span>
-      <span class="mq-item"><span class="mq-dot">▸</span>ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span>
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank">Term Deposit Scheme for 555 Days — View Circular</a></span>
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank">Election Result 2024 — DNSBL Published</a></span>
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank">DEAF Outstanding as on 31-12-2025</a></span>
-      <span class="mq-item"><span class="mq-dot">▸</span>Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span>
-      <span class="mq-item"><span class="mq-dot">▸</span>ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span>
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank">Term Deposit Scheme for 555 Days — View Circular</a></span>
-      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank">Election Result 2024 — DNSBL Published</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" data-i18n="mq.deaf">DEAF Outstanding as on 31-12-2025</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><span data-i18n="mq.meethapur">Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><span data-i18n="mq.arho">ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" data-i18n="mq.fd">Term Deposit Scheme for 555 Days — View Circular</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank" data-i18n="mq.election">Election Result 2024 — DNSBL Published</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" data-i18n="mq.deaf">DEAF Outstanding as on 31-12-2025</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><span data-i18n="mq.meethapur">Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><span data-i18n="mq.arho">ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" data-i18n="mq.fd">Term Deposit Scheme for 555 Days — View Circular</a></span>
+      <span class="mq-item"><span class="mq-dot">▸</span><a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank" data-i18n="mq.election">Election Result 2024 — DNSBL Published</a></span>
     </div>
   </div>
 </div>
@@ -87,17 +86,96 @@
 <section id="services" class="section">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:48px">
-      <span class="tag">What We Offer</span>
-      <h2 class="section-title">Banking Services Designed for You</h2>
-      <p class="section-sub" style="margin:0 auto">From everyday savings to flexible loans — comprehensive financial solutions for every section of society.</p>
+      <span class="tag" data-i18n="svc.sec_tag">What We Offer</span>
+      <h2 class="section-title" data-i18n="svc.sec_title">Banking Services Designed for You</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="svc.sec_sub">From everyday savings to flexible loans — comprehensive financial solutions for every section of society.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card reveal"><div class="svc-icon" style="background:rgba(0,212,255,0.1)">💰</div><h3>Savings & Deposits</h3><p>Grow your wealth securely with our range of RBI-compliant deposit accounts.</p><div class="svc-tags"><span class="svc-tag">Savings Bank</span><span class="svc-tag">Current A/C</span><span class="svc-tag">Recurring</span><span class="svc-tag">Term Deposit</span><span class="svc-tag">No Frill A/C</span></div><a href="#rates-cta" class="svc-link">View Rates →</a></div>
-      <div class="svc-card reveal" style="transition-delay:.07s"><div class="svc-icon" style="background:rgba(0,196,160,0.1)">ðŸ </div><h3>Loans</h3><p>Affordable loan products for personal, housing and vehicle needs.</p><div class="svc-tags"><span class="svc-tag">Unsecured Loans</span><span class="svc-tag">Secured Loans</span><span class="svc-tag">Mortgage</span><span class="svc-tag">Vehicle Loan</span><span class="svc-tag">Renovation</span></div><a href="http://aptechdelhi.co.in/delhibanksss/wp-content/uploads/2018/07/LOAN-RULES-DNSBL.pdf" target="_blank" class="svc-link">Loan Rules →</a></div>
-      <div class="svc-card reveal" style="transition-delay:.14s"><div class="svc-icon" style="background:rgba(245,166,35,0.1)">📊</div><h3>Cash Credit &amp; OD</h3><p>Flexible credit facilities for businesses and individuals.</p><div class="svc-tags"><span class="svc-tag">Clean CC/OD</span><span class="svc-tag">Secured CC/OD</span></div><a href="#contact" class="svc-link">Enquire →</a></div>
-      <div class="svc-card reveal" style="transition-delay:.21s"><div class="svc-icon" style="background:rgba(139,92,246,0.1)">💻</div><h3>Digital Products</h3><p>Modern banking at your fingertips — access your account anytime.</p><div class="svc-tags"><span class="svc-tag">Internet Banking</span><span class="svc-tag">24/7 Access</span></div><a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" class="svc-link">Login →</a></div>
-      <div class="svc-card reveal" style="transition-delay:.28s"><div class="svc-icon" style="background:rgba(239,68,68,0.1)">📋</div><h3>Tenders &amp; Empanelment</h3><p>Official procurement and empanelment notices for vendors.</p><div class="svc-tags"><span class="svc-tag">Current Tenders</span><span class="svc-tag">Empanelment</span></div><a href="https://dnsbltd.com/" target="_blank" class="svc-link">View Tenders →</a></div>
-      <div class="svc-card reveal" style="transition-delay:.35s"><div class="svc-icon" style="background:rgba(34,197,94,0.1)">🔒</div><h3>KYC &amp; Compliance</h3><p>Stay compliant with RBI guidelines. Complete your KYC easily.</p><div class="svc-tags"><span class="svc-tag">KYC Form</span><span class="svc-tag">DICGC</span><span class="svc-tag">Cyber Security</span></div><a href="http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" class="svc-link">KYC Form →</a></div>
+      <div class="svc-card reveal">
+        <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.sav"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(0,212,255,0.1)">💰</div>
+          <h3 data-i18n="svc.sav.t">Savings & Deposits</h3>
+          <p data-i18n="svc.sav.d">Grow your wealth securely with our range of RBI-compliant deposit accounts.</p>
+          <div class="svc-tags">
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Savings Bank</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Current A/C</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Recurring</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Term Deposit</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">No Frill A/C</a>
+          </div>
+          <a href="https://dnsbltd.com/rates-of-interest/" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_rates">View Rates →</a>
+        </div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.07s">
+        <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.loan"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(0,196,160,0.1)">🏠</div>
+          <h3 data-i18n="svc.loan.t">Loans</h3>
+          <p data-i18n="svc.loan.d">Affordable loan products for personal, housing and vehicle needs.</p>
+          <div class="svc-tags">
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Unsecured Loans</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Secured Loans</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Mortgage</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Vehicle Loan</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Renovation</a>
+          </div>
+          <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_loans">Loan details (official site) →</a>
+        </div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.14s">
+        <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.cc"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(245,166,35,0.1)">📊</div>
+          <h3 data-i18n="svc.cc.t">Cash Credit &amp; OD</h3>
+          <p data-i18n="svc.cc.d">Flexible credit facilities for businesses and individuals.</p>
+          <div class="svc-tags">
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Clean CC/OD</a>
+            <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="svc-tag">Secured CC/OD</a>
+          </div>
+          <a href="https://dnsbltd.com/contact-us/" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_enquire">Enquire →</a>
+        </div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.21s">
+        <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.dig"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(139,92,246,0.1)">💻</div>
+          <h3 data-i18n="svc.dig.t">Digital Products</h3>
+          <p data-i18n="svc.dig.d">Modern banking at your fingertips — access your account anytime.</p>
+          <div class="svc-tags">
+            <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="svc-tag">Internet Banking</a>
+            <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="svc-tag">24/7 Access</a>
+          </div>
+          <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_login">Login →</a>
+        </div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.28s">
+        <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.ten"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(239,68,68,0.1)">📋</div>
+          <h3 data-i18n="svc.ten.t">Tenders &amp; Empanelment</h3>
+          <p data-i18n="svc.ten.d">Official procurement and empanelment notices for vendors.</p>
+          <div class="svc-tags">
+            <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-tag">Current Tenders</a>
+            <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-tag">Empanelment</a>
+          </div>
+          <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_tenders">View Tenders →</a>
+        </div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.35s">
+        <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-card-overlay" data-i18n-aria="svc.aria.kyc"></a>
+        <div class="svc-card-inner">
+          <div class="svc-icon" style="background:rgba(34,197,94,0.1)">🔒</div>
+          <h3 data-i18n="svc.kyc.t">KYC &amp; Compliance</h3>
+          <p data-i18n="svc.kyc.d">Stay compliant with RBI guidelines. Complete your KYC easily.</p>
+          <div class="svc-tags">
+            <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="svc-tag">KYC Form</a>
+            <a href="https://dnsbltd.com/" target="_blank" rel="noopener noreferrer" class="svc-tag">DICGC</a>
+            <a href="https://dnsbltd.com/wp-content/uploads/2023/08/CIR780.pdf" target="_blank" rel="noopener noreferrer" class="svc-tag">Cyber Security</a>
+          </div>
+          <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="svc-link" data-i18n="svc.link_kyc">KYC Form →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -108,28 +186,36 @@
 <section id="stats" class="section" style="padding:72px 0">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item reveal"><div class="stat-num" data-target="1969" data-type="year">0</div><div class="stat-label">Year Established</div><div class="stat-sub">Over 55 years of service</div></div>
-      <div class="stat-item reveal" style="transition-delay:.1s"><div class="stat-num" data-target="500000" data-prefix="₹" data-suffix="" data-format="inr">₹0</div><div class="stat-label">DICGC Insurance Cover</div><div class="stat-sub">Per customer, RBI mandated</div></div>
-      <div class="stat-item reveal" style="transition-delay:.2s"><div class="stat-num" data-target="20" data-suffix="+">0</div><div class="stat-label">Branches</div><div class="stat-sub">Across Delhi NCR</div></div>
-      <div class="stat-item reveal" style="transition-delay:.3s"><div class="stat-num" data-target="6" data-suffix="+">0</div><div class="stat-label">Core Services</div><div class="stat-sub">Savings, Loans, CC &amp; more</div></div>
+      <div class="stat-item reveal"><div class="stat-num" data-target="1969" data-type="year">0</div><div class="stat-label" data-i18n="stat.y">Year Established</div><div class="stat-sub" data-i18n="stat.y_sub">Over 55 years of service</div></div>
+      <div class="stat-item reveal" style="transition-delay:.1s"><div class="stat-num" data-target="500000" data-prefix="₹" data-suffix="" data-format="inr">₹0</div><div class="stat-label" data-i18n="stat.dicgc">DICGC Insurance Cover</div><div class="stat-sub" data-i18n="stat.dicgc_sub">Per customer, RBI mandated</div></div>
+      <div class="stat-item reveal" style="transition-delay:.2s"><div class="stat-num" data-target="20" data-suffix="+">0</div><div class="stat-label" data-i18n="stat.br">Branches</div><div class="stat-sub" data-i18n="stat.br_sub">Across Delhi NCR</div></div>
+      <div class="stat-item reveal" style="transition-delay:.3s"><div class="stat-num" data-target="6" data-suffix="+">0</div><div class="stat-label" data-i18n="stat.svc">Core Services</div><div class="stat-sub" data-i18n="stat.svc_sub">Savings, Loans, CC &amp; more</div></div>
     </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ================================================================ ABOUT TEASER ================================================================ -->
-<section id="about" class="home-about-teaser section" style="padding-top:48px;padding-bottom:48px">
+<!-- ================================================================ ABOUT ================================================================ -->
+<section id="about" class="section">
   <div class="container">
-    <div class="teaser-inner reveal">
-      <div>
-        <span class="tag">Profile</span>
-        <h2>About DNSB</h2>
-        <p>Discover our history, mission, and the people behind Delhi Nagrik Sehkari Bank Ltd. — built on trust and driven by purpose since 1969.</p>
-        <a href="about.html" class="btn btn-primary">Read full profile</a>
+    <div class="about-grid">
+      <div class="reveal-left">
+        <span class="tag">Our Story</span>
+        <h2 class="section-title">Built on Trust, Driven by Purpose</h2>
+        <p style="color:var(--text-secondary);font-size:15px;line-height:1.75;margin-bottom:8px;"><strong style="color:var(--text-primary)">Delhi Nagrik Sehkari Bank Ltd.</strong> was established in 1969 by our Founder Late Sh. T.C. Gupta — a visionary well-known in India's Co-operative Sector.</p>
+        <blockquote>"The main objective of the Bank is to service the downtrodden and economically weaker sections of the society."</blockquote>
+        <p style="color:var(--text-secondary);font-size:13.5px;line-height:1.75;">For over five decades, DNSB has been striving to fulfil the mission laid down by its founder — making banking accessible, inclusive, and trustworthy for every citizen of Delhi.</p>
+        <div class="founder-card">
+          <div class="founder-av">🏛️</div>
+          <div><div class="founder-name">Late Sh. T.C. Gupta</div><div class="founder-role">Founder, Delhi Nagrik Sehkari Bank Ltd.</div></div>
+        </div>
       </div>
-      <div style="text-align:center;padding:12px 0">
-        <img src="logo.png" alt="Delhi Nagrik Sehkari Bank Ltd." style="max-width:220px;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 12px 32px rgba(0,100,200,0.15))"/>
+      <div class="about-highlights reveal-right">
+        <div class="hl-card"><div class="hl-ico">🛡️</div><div><div class="hl-title">DICGC Insured Deposits</div><div class="hl-desc">Every deposit insured up to ₹5,00,000 per customer under RBI's Deposit Insurance &amp; Credit Guarantee Corporation.</div></div></div>
+        <div class="hl-card"><div class="hl-ico">🤝</div><div><div class="hl-title">Cooperative Banking Model</div><div class="hl-desc">We operate on co-operative principles — putting community welfare over profit, keeping members at the heart of every decision.</div></div></div>
+        <div class="hl-card"><div class="hl-ico">📑</div><div><div class="hl-title">Full Transparency</div><div class="hl-desc">Publicly available auditor's reports and balance sheets. Banking with complete accountability.</div></div></div>
+        <div class="hl-card"><div class="hl-ico">🔒</div><div><div class="hl-title">Cyber Security Certified</div><div class="hl-desc">Certified under NCSAM — your digital safety is our priority at every step.</div></div></div>
       </div>
     </div>
   </div>
@@ -139,15 +225,15 @@
 <section id="calculator" class="section" style="background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,212,255,0.05), transparent 70%)">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:48px">
-      <span class="tag">Financial Tool</span>
-      <h2 class="section-title">EMI Loan Calculator</h2>
-      <p class="section-sub" style="margin:0 auto">Calculate your monthly EMI instantly. Plan your loan before applying.</p>
+      <span class="tag" data-i18n="calc.tag">Financial Tool</span>
+      <h2 class="section-title" data-i18n="calc.title">EMI Loan Calculator</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="calc.sub">Calculate your monthly EMI instantly. Plan your loan before applying.</p>
     </div>
     <div class="calc-wrap">
       <div class="calc-card reveal">
         <div class="calc-grid">
           <div class="calc-group">
-            <label>Loan Amount</label>
+            <label data-i18n="calc.amt">Loan Amount</label>
             <div class="calc-input-wrap">
               <span class="calc-prefix">₹</span>
               <input type="number" id="loan-amount" value="500000" min="10000" max="10000000" oninput="calcEMI()"/>
@@ -156,7 +242,7 @@
             <div class="range-labels"><span>₹10K</span><span>₹50L</span></div>
           </div>
           <div class="calc-group">
-            <label>Interest Rate (% p.a.)</label>
+            <label data-i18n="calc.rate">Interest Rate (% p.a.)</label>
             <div class="calc-input-wrap">
               <span class="calc-prefix">%</span>
               <input type="number" id="loan-rate" value="9.5" min="1" max="30" step="0.1" oninput="calcEMI()"/>
@@ -165,7 +251,7 @@
             <div class="range-labels"><span>1%</span><span>30%</span></div>
           </div>
           <div class="calc-group">
-            <label>Loan Tenure (Years)</label>
+            <label data-i18n="calc.tenure">Loan Tenure (Years)</label>
             <div class="calc-input-wrap">
               <span class="calc-prefix">Yr</span>
               <input type="number" id="loan-tenure" value="5" min="1" max="30" oninput="calcEMI()"/>
@@ -175,29 +261,29 @@
           </div>
           <div class="calc-group" style="align-self:end">
             <div class="emi-result">
-              <div><div class="emi-val" id="emi-monthly">₹0</div><div class="emi-key">Monthly EMI</div></div>
+              <div><div class="emi-val" id="emi-monthly">₹0</div><div class="emi-key" data-i18n="calc.emi">Monthly EMI</div></div>
               <div class="emi-divider"></div>
-              <div><div class="emi-val" id="emi-total" style="font-size:17px">₹0</div><div class="emi-key">Total Payable</div></div>
+              <div><div class="emi-val" id="emi-total" style="font-size:17px">₹0</div><div class="emi-key" data-i18n="calc.total_paid">Total Payable</div></div>
             </div>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px">
           <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center">
             <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--accent)" id="emi-principal">₹0</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:4px">Principal Amount</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:4px" data-i18n="calc.principal">Principal Amount</div>
           </div>
           <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center">
             <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--accent-gold)" id="emi-interest">₹0</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:4px">Total Interest</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:4px" data-i18n="calc.interest_lbl">Total Interest</div>
           </div>
           <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center">
             <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--accent-2)" id="emi-savings">~0%</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:4px">Interest Ratio</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:4px" data-i18n="calc.ratio">Interest Ratio</div>
           </div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="#contact" class="btn btn-primary">Apply for Loan →</a>
-          <button class="btn btn-ghost" onclick="resetCalc()">Reset</button>
+          <a href="#contact" class="btn btn-primary" data-i18n="calc.apply">Apply for Loan →</a>
+          <button type="button" class="btn btn-ghost" onclick="resetCalc()" data-i18n="calc.reset">Reset</button>
         </div>
       </div>
     </div>
@@ -214,13 +300,13 @@
         <p class="section-sub">Access your DNSB account from anywhere through our Internet Banking portal — fast, secure, and available 24/7.</p>
         <div class="d-features">
           <div class="d-feat"><div class="d-ico">💳</div><div><div class="d-title">Account Management</div><div class="d-desc">Check balances, view statements, manage your accounts online anytime.</div></div></div>
-          <div class="d-feat"><div class="d-ico">ðŸ”</div><div><div class="d-title">Secure Authentication</div><div class="d-desc">Multi-layer login security protecting your account 24/7.</div></div></div>
+          <div class="d-feat"><div class="d-ico">🔐</div><div><div class="d-title">Secure Authentication</div><div class="d-desc">Multi-layer login security protecting your account 24/7.</div></div></div>
           <div class="d-feat"><div class="d-ico">📲</div><div><div class="d-title">24/7 Availability</div><div class="d-desc">Banking on your schedule — no branch visit needed for routine tasks.</div></div></div>
         </div>
       </div>
       <div class="reveal-right">
         <div class="ib-card">
-          <div class="ib-ico">ðŸ¦</div>
+          <div class="ib-ico">🏦</div>
           <div class="ib-title">Internet Banking Portal</div>
           <div class="ib-desc">Secure login to your DNSB account. Full access to banking services — anytime, anywhere.</div>
           <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" class="btn btn-primary" style="width:100%">Login to Internet Banking →</a>
@@ -245,7 +331,7 @@
           <div class="dash-avatar">👤</div>
           <div><div class="dash-name">Ramesh Kumar</div><div class="dash-id">Acc: DNSB-2024-****8821</div></div>
         </div>
-        <div class="dash-status">â— Online</div>
+        <div class="dash-status">● Online</div>
       </div>
       <div>
         <div class="dash-bal-label">Available Balance</div>
@@ -258,10 +344,10 @@
       </div>
       <div class="dash-txns">
         <div class="txn-title">Recent Transactions</div>
-        <div class="txn-item"><div class="txn-left"><div class="txn-ico">ðŸ›ï¸</div><div><div class="txn-name">Salary Credit</div><div class="txn-date">24 Mar 2026</div></div></div><div class="txn-amt cr">+₹24,500</div></div>
+        <div class="txn-item"><div class="txn-left"><div class="txn-ico">🏛️</div><div><div class="txn-name">Salary Credit</div><div class="txn-date">24 Mar 2026</div></div></div><div class="txn-amt cr">+₹24,500</div></div>
         <div class="txn-item"><div class="txn-left"><div class="txn-ico">💡</div><div><div class="txn-name">Electricity Bill</div><div class="txn-date">22 Mar 2026</div></div></div><div class="txn-amt dr">−₹1,850</div></div>
         <div class="txn-item"><div class="txn-left"><div class="txn-ico">📦</div><div><div class="txn-name">Recurring Deposit</div><div class="txn-date">20 Mar 2026</div></div></div><div class="txn-amt dr">−₹12,000</div></div>
-        <div class="txn-item"><div class="txn-left"><div class="txn-ico">ðŸ¥</div><div><div class="txn-name">Medical Insurance</div><div class="txn-date">18 Mar 2026</div></div></div><div class="txn-amt dr">−₹2,400</div></div>
+        <div class="txn-item"><div class="txn-left"><div class="txn-ico">🏥</div><div><div class="txn-name">Medical Insurance</div><div class="txn-date">18 Mar 2026</div></div></div><div class="txn-amt dr">−₹2,400</div></div>
       </div>
       <div class="dash-note">🔒 This is a demo preview. Login to your actual account at the Internet Banking portal above.</div>
     </div>
@@ -296,11 +382,11 @@
       <div class="branch-map-placeholder">
         <div class="map-grid"></div>
         <div class="map-pins">
-          <div class="map-pin"><div class="pin-dot"></div><div class="pin-label">ðŸ“ Subzi Mandi</div></div>
-          <div class="map-pin" style="margin-top:40px"><div class="pin-dot" style="background:var(--accent-2);box-shadow:0 0 12px var(--accent-2)"></div><div class="pin-label">ðŸ“ New Rohtak Rd</div></div>
-          <div class="map-pin" style="margin-top:20px"><div class="pin-dot"></div><div class="pin-label">ðŸ“ Meethapur</div></div>
-          <div class="map-pin" style="margin-top:55px"><div class="pin-dot" style="background:var(--accent-gold);box-shadow:0 0 12px var(--accent-gold)"></div><div class="pin-label">ðŸ“ Tri Nagar</div></div>
-          <div class="map-pin" style="margin-top:15px"><div class="pin-dot"></div><div class="pin-label">ðŸ“ Badarpur</div></div>
+          <div class="map-pin"><div class="pin-dot"></div><div class="pin-label">📍 Subzi Mandi</div></div>
+          <div class="map-pin" style="margin-top:40px"><div class="pin-dot" style="background:var(--accent-2);box-shadow:0 0 12px var(--accent-2)"></div><div class="pin-label">📍 New Rohtak Rd</div></div>
+          <div class="map-pin" style="margin-top:20px"><div class="pin-dot"></div><div class="pin-label">📍 Meethapur</div></div>
+          <div class="map-pin" style="margin-top:55px"><div class="pin-dot" style="background:var(--accent-gold);box-shadow:0 0 12px var(--accent-gold)"></div><div class="pin-label">📍 Tri Nagar</div></div>
+          <div class="map-pin" style="margin-top:15px"><div class="pin-dot"></div><div class="pin-label">📍 Badarpur</div></div>
         </div>
         <div class="map-cta">
           <a href="https://dnsbltd.com/contact-us/" target="_blank" class="btn btn-primary" style="font-size:13px">View All Branches →</a>
@@ -308,10 +394,10 @@
       </div>
     </div>
     <div class="branch-list">
-      <div class="b-card reveal"><div class="b-name">ðŸ›ï¸ Registered Office<span style="font-size:10px;font-weight:400;color:var(--text-muted);font-family:'JetBrains Mono',monospace"> · HQ</span></div><div class="b-addr">720, Near Ghanta Ghar, Subzi Mandi, Delhi – 110007</div></div>
-      <div class="b-card reveal" style="transition-delay:.08s"><div class="b-name">ðŸ¢ Administrative Office</div><div class="b-addr">3-C/5, Opp Liberty Cinema, New Rohtak Road, New Delhi – 110005<br/><span style="color:var(--accent);font-size:12px">📞 011-45541592 / 011-45062644</span></div></div>
-      <div class="b-card reveal" style="transition-delay:.16s"><div class="b-name">ðŸ“ Meethapur Branch</div><div class="b-addr">223, First Floor, Village Meethapur, P.O. Badarpur, New Delhi – 110044<br/><span style="color:var(--accent-2);font-size:11px">âš ï¸ Newly shifted location</span></div></div>
-      <div class="b-card reveal" style="transition-delay:.24s"><div class="b-name">âš–ï¸ ARHO Cell</div><div class="b-addr">Arbitration &amp; Recovery Cell (ARHO), Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi – 110005</div></div>
+      <div class="b-card reveal"><div class="b-name">🏛️ Registered Office<span style="font-size:10px;font-weight:400;color:var(--text-muted);font-family:'JetBrains Mono',monospace"> · HQ</span></div><div class="b-addr">720, Near Ghanta Ghar, Subzi Mandi, Delhi – 110007</div></div>
+      <div class="b-card reveal" style="transition-delay:.08s"><div class="b-name">🏢 Administrative Office</div><div class="b-addr">3-C/5, Opp Liberty Cinema, New Rohtak Road, New Delhi – 110005<br/><span style="color:var(--accent);font-size:12px">📞 011-45541592 / 011-45062644</span></div></div>
+      <div class="b-card reveal" style="transition-delay:.16s"><div class="b-name">📍 Meethapur Branch</div><div class="b-addr">223, First Floor, Village Meethapur, P.O. Badarpur, New Delhi – 110044<br/><span style="color:var(--accent-2);font-size:11px">⚠️ Newly shifted location</span></div></div>
+      <div class="b-card reveal" style="transition-delay:.24s"><div class="b-name">⚖️ ARHO Cell</div><div class="b-addr">Arbitration &amp; Recovery Cell (ARHO), Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi – 110005</div></div>
     </div>
   </div>
 </section>
@@ -320,34 +406,34 @@
 <section id="downloads" class="section" style="background:radial-gradient(ellipse 70% 40% at 50% 50%, rgba(0,196,160,0.05), transparent 70%)">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:40px">
-      <span class="tag">Documents</span>
-      <h2 class="section-title">Downloads &amp; Forms</h2>
-      <p class="section-sub" style="margin:0 auto">All important documents, forms and circulars in one place.</p>
+      <span class="tag" data-i18n="dl.sec_tag">Documents</span>
+      <h2 class="section-title" data-i18n="dl.sec_title">Downloads &amp; Forms</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="dl.sec_sub">All important documents, forms and circulars in one place.</p>
     </div>
     <div class="dl-grid">
-      <a href="http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" class="dl-card reveal glass-card">
-        <div class="dl-ico" style="background:rgba(0,212,255,0.1)">ðŸ“</div>
-        <div><div class="dl-name">KYC Form</div><div class="dl-type">PDF · Customer</div></div>
+      <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card">
+        <div class="dl-ico" style="background:rgba(0,212,255,0.1)">📝</div>
+        <div><div class="dl-name" data-i18n="dl.kyc_name">KYC Form</div><div class="dl-type" data-i18n="dl.kyc_type">PDF · Customer</div></div>
       </a>
-      <a href="http://aptechdelhi.co.in/delhibanksss/wp-content/uploads/2018/07/LOAN-RULES-DNSBL.pdf" target="_blank" class="dl-card reveal glass-card" style="transition-delay:.07s">
+      <a href="https://dnsbltd.com/services/" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card" style="transition-delay:.07s">
         <div class="dl-ico" style="background:rgba(0,196,160,0.1)">📋</div>
-        <div><div class="dl-name">Loan Rules</div><div class="dl-type">PDF · Loan Applicants</div></div>
+        <div><div class="dl-name" data-i18n="dl.loan_name">Loan products &amp; rules</div><div class="dl-type" data-i18n="dl.loan_type">Official website · Services</div></div>
       </a>
-      <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" class="dl-card reveal glass-card" style="transition-delay:.14s">
-        <div class="dl-ico" style="background:rgba(245,166,35,0.1)">ðŸ¦</div>
-        <div><div class="dl-name">555-Day FD Circular</div><div class="dl-type">PDF · Depositors</div></div>
+      <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card" style="transition-delay:.14s">
+        <div class="dl-ico" style="background:rgba(245,166,35,0.1)">🏦</div>
+        <div><div class="dl-name" data-i18n="dl.fd_name">555-Day FD Circular</div><div class="dl-type" data-i18n="dl.fd_type">PDF · Depositors</div></div>
       </a>
-      <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" class="dl-card reveal glass-card" style="transition-delay:.21s">
+      <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card" style="transition-delay:.21s">
         <div class="dl-ico" style="background:rgba(239,68,68,0.1)">📄</div>
-        <div><div class="dl-name">DEAF Outstanding List</div><div class="dl-type">PDF · 31-12-2025</div></div>
+        <div><div class="dl-name" data-i18n="dl.deaf_name">DEAF Outstanding List</div><div class="dl-type" data-i18n="dl.deaf_type">PDF · 31-12-2025</div></div>
       </a>
-      <a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank" class="dl-card reveal glass-card" style="transition-delay:.28s">
-        <div class="dl-ico" style="background:rgba(139,92,246,0.1)">ðŸ—³ï¸</div>
-        <div><div class="dl-name">Election Result 2024</div><div class="dl-type">PDF · Governance</div></div>
+      <a href="https://dnsbltd.com/wp-content/uploads/2024/10/RESULT-OF-ELECTION-2024-DNSBL.pdf" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card" style="transition-delay:.28s">
+        <div class="dl-ico" style="background:rgba(139,92,246,0.1)">🗳️</div>
+        <div><div class="dl-name" data-i18n="dl.elec_name">Election Result 2024</div><div class="dl-type" data-i18n="dl.elec_type">PDF · Governance</div></div>
       </a>
-      <a href="https://dnsbltd.com/wp-content/uploads/2023/08/CIR780.pdf" target="_blank" class="dl-card reveal glass-card" style="transition-delay:.35s">
+      <a href="https://dnsbltd.com/wp-content/uploads/2023/08/CIR780.pdf" target="_blank" rel="noopener noreferrer" class="dl-card reveal glass-card" style="transition-delay:.35s">
         <div class="dl-ico" style="background:rgba(34,197,94,0.1)">🔒</div>
-        <div><div class="dl-name">Cyber Security Circular</div><div class="dl-type">PDF · NCSAM</div></div>
+        <div><div class="dl-name" data-i18n="dl.cyber_name">Cyber Security Circular</div><div class="dl-type" data-i18n="dl.cyber_type">PDF · NCSAM</div></div>
       </a>
     </div>
   </div>
@@ -385,18 +471,18 @@
 <section id="contact" class="section" style="background:radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,212,255,0.05), transparent 70%)">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:40px">
-      <span class="tag">Get in Touch</span>
-      <h2 class="section-title">We're Here to Help</h2>
-      <p class="section-sub" style="margin:0 auto">Contact our offices or send us an email. Our team is ready to assist you with any banking need.</p>
+      <span class="tag" data-i18n="contact.tag">Get in Touch</span>
+      <h2 class="section-title" data-i18n="contact.title">We're Here to Help</h2>
+      <p class="section-sub" style="margin:0 auto" data-i18n="contact.sub">Contact our offices or send us an email. Our team is ready to assist you with any banking need.</p>
     </div>
     <div class="contact-grid">
-      <div class="ct-card reveal"><div class="ct-ico">ðŸ›ï¸</div><h4>Registered Office</h4><div class="ct-label">Address</div><p>720, Near Ghanta Ghar,<br/>Subzi Mandi, Delhi – 110007</p></div>
-      <div class="ct-card reveal" style="transition-delay:.1s"><div class="ct-ico">ðŸ¢</div><h4>Administrative Office</h4><div class="ct-label">Address</div><p>3-C/5, Opposite Liberty Cinema,<br/>New Rohtak Road, New Delhi – 110005</p><div class="ct-label">Phone</div><a href="tel:01145541592">011-45541592</a><a href="tel:01145062644">011-45062644</a></div>
-      <div class="ct-card reveal" style="transition-delay:.2s"><div class="ct-ico">âœ‰ï¸</div><h4>Email &amp; Complaints</h4><div class="ct-label">General</div><a href="mailto:info@dnsbltd.com">info@dnsbltd.com</a><div class="ct-label">Complaints</div><a href="mailto:dnsb.complaint@gmail.com">dnsb.complaint@gmail.com</a><div style="margin-top:16px"><a href="https://dnsbltd.com/auditors-report-balance-sheet/" target="_blank" class="svc-link">Auditor's Report &amp; Balance Sheet →</a></div></div>
+      <div class="ct-card reveal"><div class="ct-ico">🏛️</div><h4>Registered Office</h4><div class="ct-label">Address</div><p>720, Near Ghanta Ghar,<br/>Subzi Mandi, Delhi – 110007</p></div>
+      <div class="ct-card reveal" style="transition-delay:.1s"><div class="ct-ico">🏢</div><h4>Administrative Office</h4><div class="ct-label">Address</div><p>3-C/5, Opposite Liberty Cinema,<br/>New Rohtak Road, New Delhi – 110005</p><div class="ct-label">Phone</div><a href="tel:01145541592">011-45541592</a><a href="tel:01145062644">011-45062644</a></div>
+      <div class="ct-card reveal" style="transition-delay:.2s"><div class="ct-ico">✉️</div><h4>Email &amp; Complaints</h4><div class="ct-label">General</div><a href="mailto:info@dnsbltd.com">info@dnsbltd.com</a><div class="ct-label">Complaints</div><a href="mailto:dnsb.complaint@gmail.com">dnsb.complaint@gmail.com</a><div style="margin-top:16px"><a href="https://dnsbltd.com/auditors-report-balance-sheet/" target="_blank" class="svc-link">Auditor's Report &amp; Balance Sheet →</a></div></div>
     </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
-      <a href="mailto:info@dnsbltd.com" class="btn btn-primary" style="margin-right:12px">📧 Email Us</a>
-      <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" class="btn btn-ghost">Open Account</a>
+      <a href="mailto:info@dnsbltd.com" class="btn btn-primary" style="margin-right:12px" data-i18n="contact.email_btn">📧 Email Us</a>
+      <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="contact.open">Open Account</a>
     </div>
   </div>
 </section>
@@ -405,36 +491,135 @@
 <div id="footer-mount" class="components-mount"></div>
 
 <!-- CHATBOT FAB -->
-<button id="chat-fab" onclick="toggleChat()" title="Chat with DNSB">
+<button type="button" id="chat-fab" onclick="toggleChat()" data-i18n-title="chat.fab">
   💬<span class="chat-notif">1</span>
 </button>
 
 <!-- CHAT WINDOW -->
 <div id="chat-window">
   <div class="chat-head">
-    <div class="chat-av">ðŸ¦</div>
-    <div><div class="chat-hname">DNSB Assistant</div><div class="chat-hstatus">Online · Powered by AI</div></div>
-    <button class="chat-hclose" onclick="toggleChat()">âœ•</button>
+    <div class="chat-av">🏦</div>
+    <div><div class="chat-hname" data-i18n="chat.name">DNSB Assistant</div><div class="chat-hstatus" data-i18n="chat.status">Online · Powered by AI</div></div>
+    <button type="button" class="chat-hclose" onclick="toggleChat()" data-i18n-aria="chat.close">✕</button>
   </div>
   <div class="chat-body" id="chat-body"></div>
   <div class="chat-faqs" id="chat-faqs">
-    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')">Open Account</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')">Loan Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')">Branch Details</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')">DICGC Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')">FD Scheme</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')" data-i18n="chat.faq1">Open Account</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')" data-i18n="chat.faq2">Loan Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')" data-i18n="chat.faq3">Branch Details</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')" data-i18n="chat.faq4">DICGC Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')" data-i18n="chat.faq5">FD Scheme</span>
   </div>
   <div class="chat-foot">
-    <input type="text" id="chat-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()"/>
-    <button id="chat-send" onclick="sendChat()">âž¤</button>
+    <input type="text" id="chat-input" data-i18n-placeholder="chat.ph" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
+    <button type="button" id="chat-send" onclick="sendChat()">➤</button>
   </div>
 </div>
 
 <!-- SCROLL TOP -->
-<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n-title="to_top">↑</button>
 
+<!-- ================================================================
+     SCRIPTS
+================================================================ -->
+<script src="js/i18n.js"></script>
 <script src="js/site-shared.js"></script>
 <script>
+// =========================================================
+// BG CANVAS
+// =========================================================
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let W, H, pts = [];
+
+function resizeCanvas() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+class Pt {
+  constructor() { this.reset(); }
+  reset() {
+    this.x = Math.random() * W; this.y = Math.random() * H;
+    this.vx = (Math.random()-0.5)*0.22; this.vy = (Math.random()-0.5)*0.22;
+    this.r = Math.random()*1.2+0.4; this.a = Math.random()*0.3+0.05;
+  }
+  tick() {
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+  }
+}
+for (let i=0;i<80;i++) pts.push(new Pt());
+
+function drawBg() {
+  ctx.clearRect(0,0,W,H);
+  const theme = document.documentElement.getAttribute('data-theme');
+  const col = theme === 'light' ? '0,80,180' : '0,212,255';
+
+  // ambient blobs
+  const g1 = ctx.createRadialGradient(W*0.25,H*0.2,0,W*0.25,H*0.2,W*0.6);
+  g1.addColorStop(0, theme==='light'?'rgba(0,100,200,0.06)':'rgba(0,60,120,0.12)');
+  g1.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g1; ctx.fillRect(0,0,W,H);
+
+  const g2 = ctx.createRadialGradient(W*0.8,H*0.75,0,W*0.8,H*0.75,W*0.45);
+  g2.addColorStop(0, theme==='light'?'rgba(0,139,110,0.04)':'rgba(0,196,160,0.07)');
+  g2.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g2; ctx.fillRect(0,0,W,H);
+
+  pts.forEach(p => {
+    p.tick();
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(${col},${p.a})`; ctx.fill();
+  });
+  for (let i=0;i<pts.length;i++) {
+    for (let j=i+1;j<pts.length;j++) {
+      const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if (d<110) {
+        ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle=`rgba(${col},${0.055*(1-d/110)})`; ctx.lineWidth=0.5; ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawBg);
+}
+drawBg();
+
+// =========================================================
+// THEME
+// =========================================================
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('dnsb-theme', t);
+}
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute('data-theme');
+  applyTheme(cur === 'dark' ? 'light' : 'dark');
+}
+(function initTheme() {
+  const saved = localStorage.getItem('dnsb-theme');
+  if (saved) { applyTheme(saved); return; }
+  const pref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  applyTheme(pref);
+})();
+
+// =========================================================
+// NAVBAR SCROLL
+// =========================================================
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 40);
+  document.getElementById('to-top').classList.toggle('vis', scrollY > 500);
+});
+
+// =========================================================
+// MOBILE NAV
+// =========================================================
+function openMob() { document.getElementById('mob-nav').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMob() { document.getElementById('mob-nav').classList.remove('open'); document.body.style.overflow=''; }
+
 // =========================================================
 // REVEAL ON SCROLL
 // =========================================================
@@ -460,12 +645,12 @@ function animateCounter(el) {
     const ease = 1 - Math.pow(1 - t, 3);
     const val = Math.floor(startVal + ease * (target - startVal));
     if (fmt === 'inr') {
-      el.textContent = '\u20B9' + val.toLocaleString('en-IN');
+      el.textContent = '₹' + val.toLocaleString('en-IN');
     } else {
       el.textContent = prefix + val.toLocaleString() + (t < 1 ? '' : suffix);
     }
     if (t < 1) requestAnimationFrame(step);
-    else if (fmt === 'inr') el.textContent = '\u20B95,00,000';
+    else if (fmt === 'inr') el.textContent = '₹5,00,000';
     else el.textContent = prefix + target.toLocaleString() + suffix;
   }
   requestAnimationFrame(step);
@@ -485,7 +670,7 @@ document.querySelectorAll('#stats').forEach(s => statsObs.observe(s));
 // EMI CALCULATOR
 // =========================================================
 function fmtINR(n) {
-  return '\u20B9' + Math.round(n).toLocaleString('en-IN');
+  return '₹' + Math.round(n).toLocaleString('en-IN');
 }
 
 function calcEMI() {
@@ -593,19 +778,19 @@ async function handleBot(msg) {
 
   // Rule-based quick answers for common queries
   if (lower.includes('branch') || lower.includes('location') || lower.includes('address') || lower.includes('kahan')) {
-    addBotMsg("ðŸ“ <strong>DNSB Branches:</strong><br/>â€¢ <b>Registered Office:</b> 720, Near Ghanta Ghar, Subzi Mandi, Delhi-110007<br/>â€¢ <b>Admin Office:</b> 3-C/5, Opp Liberty Cinema, New Rohtak Rd, Delhi-110005<br/>â€¢ <b>Meethapur Branch:</b> 223, Village Meethapur, Badarpur, Delhi-110044<br/><br/>📞 Call: 011-45541592");
+    addBotMsg("📍 <strong>DNSB Branches:</strong><br/>• <b>Registered Office:</b> 720, Near Ghanta Ghar, Subzi Mandi, Delhi-110007<br/>• <b>Admin Office:</b> 3-C/5, Opp Liberty Cinema, New Rohtak Rd, Delhi-110005<br/>• <b>Meethapur Branch:</b> 223, Village Meethapur, Badarpur, Delhi-110044<br/><br/>📞 Call: 011-45541592");
     return;
   }
   if (lower.includes('open account') || lower.includes('saving') || lower.includes('account kholna')) {
-    addBotMsg("ðŸ¦ <strong>Account Opening at DNSB:</strong><br/>1ï¸âƒ£ Visit your nearest branch<br/>2ï¸âƒ£ Fill the KYC form (download below)<br/>3ï¸âƒ£ Submit: Aadhaar, PAN, photo, address proof<br/>4ï¸âƒ£ Initial deposit as required<br/><br/>📄 <a href='http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' style='color:var(--accent)'>Download KYC Form →</a>");
+    addBotMsg("🏦 <strong>Account Opening at DNSB:</strong><br/>1️⃣ Visit your nearest branch<br/>2️⃣ Fill the KYC form (download below)<br/>3️⃣ Submit: Aadhaar, PAN, photo, address proof<br/>4️⃣ Initial deposit as required<br/><br/>📄 <a href='https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
     return;
   }
   if (lower.includes('loan') || lower.includes('emi') || lower.includes('rin')) {
-    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>â€¢ Unsecured Loans (no collateral)<br/>â€¢ Secured Loans (with collateral)<br/>â€¢ Registered Mortgage<br/>â€¢ Vehicle Loan<br/>â€¢ Home Renovation / Plot Purchase<br/><br/>Use our <a href='#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> to plan your loan. Or visit any branch!");
+    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>• Unsecured Loans (no collateral)<br/>• Secured Loans (with collateral)<br/>• Registered Mortgage<br/>• Vehicle Loan<br/>• Home Renovation / Plot Purchase<br/><br/>📋 <a href='https://dnsbltd.com/services/' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Official loan details on dnsbltd.com →</a><br/><br/>Use our <a href='#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> to plan your loan. Or visit any branch!");
     return;
   }
   if (lower.includes('dicgc') || lower.includes('insurance') || lower.includes('insure') || lower.includes('deposit safe')) {
-    addBotMsg("ðŸ›¡ï¸ <strong>DICGC Insurance:</strong><br/>Your deposits at DNSB are insured up to <strong>₹5,00,000 per customer</strong> under RBI's Deposit Insurance &amp; Credit Guarantee Corporation (DICGC). This means your money is safe even in unexpected situations.");
+    addBotMsg("🛡️ <strong>DICGC Insurance:</strong><br/>Your deposits at DNSB are insured up to <strong>₹5,00,000 per customer</strong> under RBI's Deposit Insurance &amp; Credit Guarantee Corporation (DICGC). This means your money is safe even in unexpected situations.");
     return;
   }
   if (lower.includes('fd') || lower.includes('fixed') || lower.includes('555') || lower.includes('term deposit')) {
@@ -617,7 +802,7 @@ async function handleBot(msg) {
     return;
   }
   if (lower.includes('kyc') || lower.includes('document')) {
-    addBotMsg("ðŸ“ <strong>KYC Requirements:</strong><br/>â€¢ Aadhaar Card<br/>â€¢ PAN Card<br/>â€¢ Passport-size photo<br/>â€¢ Address proof<br/><br/><a href='http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' style='color:var(--accent)'>Download KYC Form →</a>");
+    addBotMsg("📝 <strong>KYC Requirements:</strong><br/>• Aadhaar Card<br/>• PAN Card<br/>• Passport-size photo<br/>• Address proof<br/><br/><a href='https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
     return;
   }
   if (lower.includes('phone') || lower.includes('call') || lower.includes('contact') || lower.includes('email')) {

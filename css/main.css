@@ -244,6 +244,32 @@ body {
 
 .nav-right { display: flex; align-items: center; gap: 8px; }
 
+.lang-switch, .mob-lang {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.mob-lang { margin-bottom: 4px; }
+.lang-btn {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1.2;
+}
+.lang-btn:hover { color: var(--text-primary); background: var(--bg-hover); }
+.lang-btn.lang-active {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* Theme toggle */
 .theme-toggle {
   width: 44px; height: 24px; border-radius: 100px; cursor: pointer; border: none;
@@ -267,6 +293,7 @@ body {
   .nav-links { display:none; }
   .hamburger { display:flex; }
   .nav-right .btn-ghost { display:none; }
+  .nav-right .lang-switch { display:none; }
 }
 
 /* ================================================================
@@ -281,6 +308,7 @@ body {
 #mob-nav a { font-family:'Syne',sans-serif; font-size:24px; font-weight:700; color:var(--text-secondary); text-decoration:none; transition:color 0.2s; }
 #mob-nav a:hover { color:var(--accent); }
 #mob-close { position:absolute; top:20px; right:20px; font-size:24px; background:none; border:none; cursor:pointer; color:var(--text-muted); }
+#mob-nav .mob-lang { position:absolute; top:20px; left:20px; margin:0; }
 
 /* ================================================================
    HERO
@@ -386,7 +414,7 @@ body {
 .svc-card::before {
   content:''; position:absolute; inset:0; border-radius:inherit;
   background: linear-gradient(135deg, rgba(0,212,255,0.06), transparent 60%);
-  opacity:0; transition: opacity 0.3s;
+  opacity:0; transition: opacity 0.3s; pointer-events:none; z-index:0;
 }
 .svc-card:hover { border-color: var(--border-accent); transform: translateY(-5px); box-shadow: var(--shadow-glow); }
 .svc-card:hover::before { opacity:1; }
@@ -396,6 +424,18 @@ body {
 .svc-card p { font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:16px; }
 .svc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px; }
 .svc-tag { font-size:11px; background:var(--bg-hover); border:1px solid var(--border); color:var(--text-secondary); border-radius:6px; padding:3px 10px; }
+a.svc-tag {
+  text-decoration:none; cursor:pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+a.svc-tag:hover { border-color: var(--border-accent); color: var(--accent); background: var(--bg-card); }
+.svc-card-overlay {
+  position:absolute; inset:0; z-index:1; border-radius:inherit;
+  text-indent:-9999px; overflow:hidden; outline:none;
+}
+.svc-card-inner { position:relative; z-index:2; pointer-events:none; }
+.svc-card-inner .svc-tags a,
+.svc-card-inner .svc-link { pointer-events:auto; }
 .svc-link { font-size:13px; font-weight:600; color:var(--accent); text-decoration:none; display:inline-flex; align-items:center; gap:5px; transition:gap 0.2s; }
 .svc-link:hover { gap:9px; }
 
@@ -1082,12 +1122,31 @@ input[type="range"]::-webkit-slider-thumb {
   .services-grid { grid-template-columns: 1fr; }
 }
 .service-card {
+  position: relative;
+  overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 22px;
   padding: 28px 26px;
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
   box-shadow: var(--shadow-card);
+}
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  text-indent: -9999px;
+  overflow: hidden;
+  outline: none;
+}
+.service-card-inner {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.service-card-inner a {
+  pointer-events: auto;
 }
 .service-card:hover {
   border-color: var(--border-accent);
@@ -1127,6 +1186,14 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.55;
+}
+.service-list li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.service-list li a:hover {
+  color: var(--accent);
 }
 .service-list li::before {
   content: '';

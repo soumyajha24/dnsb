@@ -26,7 +26,9 @@ const siteComponentsReady = (async () => {
   } catch (e) {
     console.warn('DNSB: could not load header/footer (use a local server, not file://).', e);
   }
-})();
+})().finally(() => {
+  if (typeof window.applyI18n === 'function') window.applyI18n();
+});
 
 (function initBgCanvas() {
   const canvas = document.getElementById('bg-canvas');

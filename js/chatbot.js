@@ -66,11 +66,11 @@ async function handleBot(msg) {
     return;
   }
   if (lower.includes('open account') || lower.includes('saving') || lower.includes('account kholna')) {
-    addBotMsg("🏦 <strong>Account Opening at DNSB:</strong><br/>1️⃣ Visit your nearest branch<br/>2️⃣ Fill the KYC form (download below)<br/>3️⃣ Submit: Aadhaar, PAN, photo, address proof<br/>4️⃣ Initial deposit as required<br/><br/>📄 <a href='http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
+    addBotMsg("🏦 <strong>Account Opening at DNSB:</strong><br/>1️⃣ Visit your nearest branch<br/>2️⃣ Fill the KYC form (download below)<br/>3️⃣ Submit: Aadhaar, PAN, photo, address proof<br/>4️⃣ Initial deposit as required<br/><br/>📄 <a href='https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
     return;
   }
   if (lower.includes('loan') || lower.includes('emi') || lower.includes('rin')) {
-    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>• Unsecured Loans (no collateral)<br/>• Secured Loans (with collateral)<br/>• Registered Mortgage<br/>• Vehicle Loan<br/>• Home Renovation / Plot Purchase<br/><br/>Use our <a href='index.html#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> on the home page to plan your loan. Or visit any branch!");
+    addBotMsg("💰 <strong>DNSB Loan Products:</strong><br/>• Unsecured Loans (no collateral)<br/>• Secured Loans (with collateral)<br/>• Registered Mortgage<br/>• Vehicle Loan<br/>• Home Renovation / Plot Purchase<br/><br/>📋 <a href='https://dnsbltd.com/services/' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Official loan details on dnsbltd.com →</a><br/><br/>Use our <a href='index.html#calculator' style='color:var(--accent)' onclick='toggleChat()'>EMI Calculator</a> on the home page to plan your loan. Or visit any branch!");
     return;
   }
   if (lower.includes('dicgc') || lower.includes('insurance') || lower.includes('insure') || lower.includes('deposit safe')) {
@@ -86,7 +86,7 @@ async function handleBot(msg) {
     return;
   }
   if (lower.includes('kyc') || lower.includes('document')) {
-    addBotMsg("📝 <strong>KYC Requirements:</strong><br/>• Aadhaar Card<br/>• PAN Card<br/>• Passport-size photo<br/>• Address proof<br/><br/><a href='http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
+    addBotMsg("📝 <strong>KYC Requirements:</strong><br/>• Aadhaar Card<br/>• PAN Card<br/>• Passport-size photo<br/>• Address proof<br/><br/><a href='https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>Download KYC Form →</a>");
     return;
   }
   if (lower.includes('phone') || lower.includes('call') || lower.includes('contact') || lower.includes('email')) {

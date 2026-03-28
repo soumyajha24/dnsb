@@ -1,32 +1,36 @@
 <!-- Site header (loaded by pages) -->
 <div id="mob-nav">
-  <button type="button" id="mob-close" onclick="closeMob()">✕</button>
-  <a href="index.html" onclick="closeMob()">Home</a>
-  <a href="about.html" onclick="closeMob()">About</a>
-  <a href="services.html" onclick="closeMob()">Services</a>
-  <a href="rates.html" onclick="closeMob()">Rates</a>
-  <a href="downloads.html" onclick="closeMob()">Downloads</a>
-  <a href="contact.html" onclick="closeMob()">Contact</a>
-  <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Internet Banking →</a>
+  <button type="button" id="mob-close" onclick="closeMob()" data-i18n-aria="nav.close_menu">✕</button>
+  <div class="mob-lang" role="group" data-i18n-aria="lang.group">
+    <button type="button" class="lang-btn" data-lang="en" onclick="setSiteLang('en')" title="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="hi" onclick="setSiteLang('hi')" title="हिंदी">हि</button>
+  </div>
+  <a href="index.html" onclick="closeMob()" data-i18n="nav.home">Home</a>
+  <a href="about.html" onclick="closeMob()" data-i18n="nav.about">About</a>
+  <a href="services.html" onclick="closeMob()" data-i18n="nav.services">Services</a>
+  <a href="rates.html" onclick="closeMob()" data-i18n="nav.rates">Rates</a>
+  <a href="downloads.html" onclick="closeMob()" data-i18n="nav.downloads">Downloads</a>
+  <a href="contact.html" onclick="closeMob()" data-i18n="nav.contact">Contact</a>
+  <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" style="color:var(--accent)" data-i18n="nav.ib_short">Internet Banking →</a>
 </div>
 
 <div id="notif-bar">
   <div class="container">
     <div class="notif-inner">
-      <span class="notif-badge">📢 Live</span>
+      <span class="notif-badge" data-i18n="header.notif_live">📢 Live</span>
       <div class="notif-scroll">
         <div class="notif-track">
-          <span class="notif-item">🏦 New FD Rates Updated — <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" rel="noopener noreferrer">555-Day Term Deposit Scheme now active</a></span>
-          <span class="notif-item">📍 Meethapur Branch shifted to 223, Village Meethapur, P.O Badarpur, New Delhi – 110044</span>
-          <span class="notif-item">🔔 ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi – 110005</span>
-          <span class="notif-item">📄 <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" rel="noopener noreferrer">DEAF Outstanding List (31-12-2025) — Download Now</a></span>
-          <span class="notif-item">🏦 New FD Rates Updated — <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" rel="noopener noreferrer">555-Day Term Deposit Scheme now active</a></span>
-          <span class="notif-item">📍 Meethapur Branch shifted to 223, Village Meethapur, P.O Badarpur, New Delhi – 110044</span>
-          <span class="notif-item">🔔 ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi – 110005</span>
-          <span class="notif-item">📄 <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" rel="noopener noreferrer">DEAF Outstanding List (31-12-2025) — Download Now</a></span>
+          <span class="notif-item">🏦 <span data-i18n="notif.fd">New FD Rates Updated —</span> <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" rel="noopener noreferrer" data-i18n="notif.fd_link">555-Day Term Deposit Scheme now active</a></span>
+          <span class="notif-item">📍 <span data-i18n="notif.meethapur">Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span></span>
+          <span class="notif-item">🔔 <span data-i18n="notif.arho">ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span></span>
+          <span class="notif-item">📄 <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" rel="noopener noreferrer" data-i18n="notif.deaf">DEAF Outstanding List (31-12-2025) — Download Now</a></span>
+          <span class="notif-item">🏦 <span data-i18n="notif.fd">New FD Rates Updated —</span> <a href="https://dnsbltd.com/wp-content/uploads/2025/03/CIR872.pdf" target="_blank" rel="noopener noreferrer" data-i18n="notif.fd_link">555-Day Term Deposit Scheme now active</a></span>
+          <span class="notif-item">📍 <span data-i18n="notif.meethapur">Meethapur Branch shifted — 223, Village Meethapur, Badarpur, Delhi-110044</span></span>
+          <span class="notif-item">🔔 <span data-i18n="notif.arho">ARHO shifted to Admin Office, 3-C/5, Opp Liberty Cinema, New Rohtak Road, Delhi-110005</span></span>
+          <span class="notif-item">📄 <a href="https://dnsbltd.com/wp-content/uploads/2026/02/LIST-OF-DEAF-OUTSTANDING-31122025.pdf" target="_blank" rel="noopener noreferrer" data-i18n="notif.deaf">DEAF Outstanding List (31-12-2025) — Download Now</a></span>
         </div>
       </div>
-      <button type="button" class="notif-close" onclick="document.getElementById('notif-bar').style.display='none'" aria-label="Close notifications">✕</button>
+      <button type="button" class="notif-close" onclick="document.getElementById('notif-bar').style.display='none'" data-i18n-aria="nav.dismiss_notif">✕</button>
     </div>
   </div>
 </div>
@@ -37,25 +41,29 @@
       <img src="logo.png" alt="DNSB logo" class="nav-logo-img" width="44" height="44"/>
       <div>
         <div class="nav-logo-name">DNSB</div>
-        <div class="nav-logo-sub">Est. 1969 · Cooperative Bank</div>
+        <div class="nav-logo-sub" data-i18n="header.logo_sub">Est. 1969 · Cooperative Bank</div>
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="rates.html">Rates</a></li>
-      <li><a href="downloads.html">Downloads</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="rates.html" data-i18n="nav.rates">Rates</a></li>
+      <li><a href="downloads.html" data-i18n="nav.downloads">Downloads</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <button type="button" class="theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark or light mode">
+      <div class="lang-switch" role="group" data-i18n-aria="lang.group">
+        <button type="button" class="lang-btn" data-lang="en" onclick="setSiteLang('en')" title="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="hi" onclick="setSiteLang('hi')" title="हिंदी">हि</button>
+      </div>
+      <button type="button" class="theme-toggle" id="theme-btn" onclick="toggleTheme()" data-i18n-title="nav.theme" data-i18n-aria="nav.theme">
         <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
         <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
       </button>
-      <a href="http://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding:8px 16px;font-size:12px">KYC Form</a>
-      <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:9px 18px;font-size:13px">Internet Banking →</a>
-      <button type="button" class="hamburger" onclick="openMob()" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <a href="https://dnsbltd.com/wp-content/uploads/2018/04/KYC%20FORM.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding:8px 16px;font-size:12px" data-i18n="nav.kyc">KYC Form</a>
+      <a href="https://online.dnsbltd.com/ibs-jsp/faces/pages/user/login.xhtml" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:9px 18px;font-size:13px" data-i18n="nav.ib">Internet Banking →</a>
+      <button type="button" class="hamburger" onclick="openMob()" data-i18n-aria="nav.menu" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>

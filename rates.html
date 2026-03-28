@@ -18,14 +18,14 @@
 <section id="rates-page" class="section" style="padding-top:60px;padding-bottom:96px">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:48px">
-      <span class="tag">Transparency</span>
-      <h1 class="hero-title">Rates &amp; <span class="gradient-text">Charges</span></h1>
-      <p class="section-sub" style="margin:0 auto">Transparent banking with uncompromised integrity. View our latest Service Charges and Interest Rates.</p>
+      <span class="tag" data-i18n="page.rates.tag">Transparency</span>
+      <h1 class="hero-title"><span data-i18n="page.rates.title1">Rates &amp;</span> <span class="gradient-text" data-i18n="page.rates.title2">Charges</span></h1>
+      <p class="section-sub" style="margin:0 auto" data-i18n="page.rates.lead">Transparent banking with uncompromised integrity. View our latest Service Charges and Interest Rates.</p>
     </div>
 
     <div class="rc-tabs reveal" role="tablist" aria-label="Rates and charges">
-      <button type="button" class="rc-tab active" role="tab" aria-selected="true" aria-controls="tab-charges" id="tab-btn-charges" onclick="switchTab('charges')">Service Charges</button>
-      <button type="button" class="rc-tab" role="tab" aria-selected="false" aria-controls="tab-rates" id="tab-btn-rates" onclick="switchTab('rates')">Rates of Interest</button>
+      <button type="button" class="rc-tab active" role="tab" aria-selected="true" aria-controls="tab-charges" id="tab-btn-charges" onclick="switchTab('charges')" data-i18n="page.rates.tab_charges">Service Charges</button>
+      <button type="button" class="rc-tab" role="tab" aria-selected="false" aria-controls="tab-rates" id="tab-btn-rates" onclick="switchTab('rates')" data-i18n="page.rates.tab_rates">Rates of Interest</button>
     </div>
 
     <div id="tab-charges" class="rc-content active" role="tabpanel" aria-labelledby="tab-btn-charges">
@@ -167,32 +167,33 @@
 
 <div id="footer-mount" class="components-mount"></div>
 
-<button type="button" id="chat-fab" onclick="toggleChat()" title="Chat with DNSB">
+<button type="button" id="chat-fab" onclick="toggleChat()" data-i18n-title="chat.fab">
   💬<span class="chat-notif">1</span>
 </button>
 
 <div id="chat-window">
   <div class="chat-head">
     <div class="chat-av">🏦</div>
-    <div><div class="chat-hname">DNSB Assistant</div><div class="chat-hstatus">Online · Powered by AI</div></div>
-    <button type="button" class="chat-hclose" onclick="toggleChat()" aria-label="Close chat">✕</button>
+    <div><div class="chat-hname" data-i18n="chat.name">DNSB Assistant</div><div class="chat-hstatus" data-i18n="chat.status">Online · Powered by AI</div></div>
+    <button type="button" class="chat-hclose" onclick="toggleChat()" data-i18n-aria="chat.close">✕</button>
   </div>
   <div class="chat-body" id="chat-body"></div>
   <div class="chat-faqs" id="chat-faqs">
-    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')">Open Account</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')">Loan Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')">Branch Details</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')">DICGC Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')">FD Scheme</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')" data-i18n="chat.faq1">Open Account</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')" data-i18n="chat.faq2">Loan Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')" data-i18n="chat.faq3">Branch Details</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')" data-i18n="chat.faq4">DICGC Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')" data-i18n="chat.faq5">FD Scheme</span>
   </div>
   <div class="chat-foot">
-    <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
+    <input type="text" id="chat-input" data-i18n-placeholder="chat.ph" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
     <button type="button" id="chat-send" onclick="sendChat()">➤</button>
   </div>
 </div>
 
-<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n-title="to_top">↑</button>
 
+<script src="js/i18n.js"></script>
 <script src="js/site-shared.js"></script>
 <script>
 function switchTab(tab) {

@@ -18,9 +18,9 @@
 <section id="contact-page" class="section" style="padding-top:60px;padding-bottom:96px">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:60px">
-      <span class="tag">Get in Touch</span>
-      <h1 class="hero-title">Contact <span class="gradient-text">Us</span></h1>
-      <p class="section-sub" style="margin:0 auto">Find all the ways you can reach DNSB — from our corporate offices to a branch near you.</p>
+      <span class="tag" data-i18n="page.ct.tag">Get in Touch</span>
+      <h1 class="hero-title"><span data-i18n="page.ct.title1">Contact</span> <span class="gradient-text" data-i18n="page.ct.title2">Us</span></h1>
+      <p class="section-sub" style="margin:0 auto" data-i18n="page.ct.lead">Find all the ways you can reach DNSB — from our corporate offices to a branch near you.</p>
     </div>
 
     <div class="contact-cards-grid">
@@ -190,40 +190,41 @@
     </div>
 
     <div style="text-align:center;margin-top:48px" class="reveal">
-      <a href="index.html" class="btn btn-ghost">← Back to home</a>
-      <a href="mailto:info@dnsbltd.com" class="btn btn-primary" style="margin-left:12px">Email us</a>
+      <a href="index.html" class="btn btn-ghost" data-i18n="page.ct.back">← Back to home</a>
+      <a href="mailto:info@dnsbltd.com" class="btn btn-primary" style="margin-left:12px" data-i18n="page.ct.email">Email us</a>
     </div>
   </div>
 </section>
 
 <div id="footer-mount" class="components-mount"></div>
 
-<button type="button" id="chat-fab" onclick="toggleChat()" title="Chat with DNSB">
+<button type="button" id="chat-fab" onclick="toggleChat()" data-i18n-title="chat.fab">
   💬<span class="chat-notif">1</span>
 </button>
 
 <div id="chat-window">
   <div class="chat-head">
     <div class="chat-av">🏦</div>
-    <div><div class="chat-hname">DNSB Assistant</div><div class="chat-hstatus">Online · Powered by AI</div></div>
-    <button type="button" class="chat-hclose" onclick="toggleChat()" aria-label="Close chat">✕</button>
+    <div><div class="chat-hname" data-i18n="chat.name">DNSB Assistant</div><div class="chat-hstatus" data-i18n="chat.status">Online · Powered by AI</div></div>
+    <button type="button" class="chat-hclose" onclick="toggleChat()" data-i18n-aria="chat.close">✕</button>
   </div>
   <div class="chat-body" id="chat-body"></div>
   <div class="chat-faqs" id="chat-faqs">
-    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')">Open Account</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')">Loan Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')">Branch Details</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')">DICGC Info</span>
-    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')">FD Scheme</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'How to open an account?')" data-i18n="chat.faq1">Open Account</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What loans are available?')" data-i18n="chat.faq2">Loan Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'Where are the branches?')" data-i18n="chat.faq3">Branch Details</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the DICGC insurance?')" data-i18n="chat.faq4">DICGC Info</span>
+    <span class="chat-faq" onclick="sendFAQ(this,'What is the 555-day FD scheme?')" data-i18n="chat.faq5">FD Scheme</span>
   </div>
   <div class="chat-foot">
-    <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
+    <input type="text" id="chat-input" data-i18n-placeholder="chat.ph" placeholder="Ask me anything..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()"/>
     <button type="button" id="chat-send" onclick="sendChat()">➤</button>
   </div>
 </div>
 
-<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button type="button" id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n-title="to_top">↑</button>
 
+<script src="js/i18n.js"></script>
 <script src="js/site-shared.js"></script>
 <script>
 const ro = new IntersectionObserver(entries => {
