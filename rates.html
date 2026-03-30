@@ -211,6 +211,11 @@ function switchTab(tab) {
   charges.classList.toggle('active', isCharges);
   rates.classList.toggle('active', !isCharges);
 }
+(function initRatesHash() {
+  const h = (window.location.hash || '').toLowerCase();
+  if (h === '#tab-rates' || h === '#rates') switchTab('rates');
+  else if (h === '#tab-charges' || h === '#charges') switchTab('charges');
+})();
 </script>
 <script>
 const ro = new IntersectionObserver(entries => {
